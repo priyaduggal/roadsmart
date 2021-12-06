@@ -1,0 +1,100 @@
+ion-header
+{
+	&:after
+	{
+		display: none;
+	}
+	ion-toolbar
+	{
+		--background: #fdfdfb;
+		--min-height: 56px;
+		--border-width: 0px;
+		ion-back-button
+		{
+			--icon-font-size: 18px;
+			--min-width: 30px;
+			color: var(--ion-color-black);
+			
+		}
+		ion-buttons
+		{
+		 margin-right:10px;
+		 img
+		 {
+		   height:18px;
+		 }
+		}
+		ion-title
+		{
+			font-size: 15px;
+			font-weight: 700;
+			color: var(--ion-color-black);
+			padding: 0px 10px;
+		}
+	}
+}
+ion-content
+{--background: #fdfdfb;
+			ion-segment {
+		    padding:10px 16px 16px;
+			ion-segment-button {
+				min-height: 35px;
+				height: 35px;
+				--indicator-height: 0px;
+				--indicator-color: transparent;
+				--indicator-color-checked: transparent;
+				color: var(--ion-color-black);
+				--color-checked: var(--ion-color-primary);
+				--color: var(--ion-color-primary);
+				text-transform: capitalize;
+				font-size: 11px;
+				font-weight: 600;
+				border:1px solid var(--ion-color-white);
+				--background: var(--ion-color-white);
+                --background-hover: var(--ion-color-white);
+				    border-radius: 30px;
+					margin-right: 6px;
+					box-shadow:0px 0px 10px rgba(0,0,0,0.07);
+					&:last-child
+					{
+					margin-right: 0px;
+					}
+					
+				&.segment-button-checked {
+					color: var(--ion-color-black);
+					--color-checked: var(--ion-color-primary);
+					--color: var(--ion-color-white);
+					--background-hover: transparent;
+					--background:var(--ion-color-white);
+					background: var(--ion-color-white);
+					border:1px solid var(--ion-color-primary);
+					font-size: 11px;
+					font-weight: 600;
+				}
+			}
+		}
+		ion-list
+		{padding: 10px 10px;
+		background:transparent;
+		[service-sec]
+		{    margin-bottom: 5px;
+			background: var(--ion-color-white);
+			border-radius: 8px;
+			box-shadow: 0px 0px 10px  rgba(0 , 0 , 0 , 0.07);
+			padding: 18px 4px;
+			outline: 0px;
+			text-align: center;
+			p
+			{
+				font-size: 12px;
+				font-weight: 600;
+				color: var(--ion-color-black);
+				margin: 10px 0px 0px;
+			}
+			img
+			{
+				max-height: 75px;
+			}
+		}
+		}
+}

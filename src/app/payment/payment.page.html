@@ -1,0 +1,50 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/date-time"></ion-back-button>
+		<ion-title class="ion-text-center">Enter Payment Info</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+<div main-head>
+		<h1>Accepted forms of payment:</h1>
+		<div paymentimg>
+		  <img src="assets/img/payment.png"/>
+		</div>
+	</div>
+	<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/person.png"/></ion-label>
+				<ion-input type="text" placeholder="Name on Card"></ion-input>				
+		</ion-item>
+	</div>
+	<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/credit-card.png"/></ion-label>
+				<ion-input type="text" placeholder="Card Number"></ion-input>	
+               <ion-datetime slot="end" Placeholder="MM / YY" displayFormat="MM / YY" ></ion-datetime>				
+		</ion-item>
+	</div>
+		<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/credit-card.png"/></ion-label>
+				<ion-input type="text" placeholder="CVC"></ion-input>				
+		</ion-item>
+	</div>
+	<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/star.png"/></ion-label>
+				<ion-input type="text" placeholder="Zip Code"></ion-input>				
+		</ion-item>
+	</div>
+	<div formgroup>
+		<ion-item lines="none" checkbox>
+           <ion-checkbox mode="md" slot="start"></ion-checkbox>
+				<ion-label>Save these details for futher use</ion-label>
+		</ion-item>
+	</div>
+	<div btnbottom class="ion-text-center">
+	 <ion-button  shape="rounded" routerLink="/tabs/home">
+				Book Appointment
+	</ion-button>
+	</div>
+</ion-content>

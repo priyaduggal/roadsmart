@@ -1,0 +1,66 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/home"></ion-back-button>
+		<ion-title class="ion-text-center">Wife's Car</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+<div carinfo>
+<ion-item lines="none" class="ion-no-padding">
+ <ion-avatar>
+   <img src="assets/img/bmw-logo.svg"/>
+ </ion-avatar>
+<ion-button slot="end" routerLink="/tabs/insurance-edit">
+  Edit
+</ion-button>
+<ion-button slot="end">
+  Request Service
+</ion-button>
+</ion-item>
+<ion-item lines="none" class="ion-no-padding" >
+<ion-label>
+<p>2013 Toyota Hilux</p>
+<div carinner><p>BAC 1412 <ion-icon name="ellipse"></ion-icon> Black</p>  <span status><ion-icon name="ellipse"></ion-icon> Active</span></div>
+</ion-label>
+</ion-item>
+</div>
+ <div scrollX>
+       <ion-button fill="outline" (click)="presentModal2()">Vehicle Info</ion-button>
+       <ion-button fill="outline" (click)="presentModal1()">Licensing</ion-button>
+       <ion-button fill="outline" (click)="presentModal3()">Insurance</ion-button>
+       <ion-button fill="outline">Maintenance</ion-button>
+ </div>
+ <h2 heading>Active Requests</h2>
+ <ion-item lines="none"  detail="false" requests>
+	<ion-label>
+	   <div requestdate >
+		  <h3># 101557</h3>
+		  <span date>
+		 Aug 21, 11:30 PM
+		  </span>
+		</div>
+		<p paratext>Brake Pad and Rotor</p>
+		<p paratext>Elmer's Tire and Auto</p>
+		<div location-status>
+		<p><ion-icon name="location-outline"></ion-icon> North Nyah 6889 Jerod Valley1</p>
+		<span status><ion-icon name="ellipse"></ion-icon> Active</span>
+		</div>
+	</ion-label>
+</ion-item>
+<ion-item lines="none"  detail="false" requests>
+	<ion-label>
+	   <div requestdate >
+		  <h3># 101557</h3>
+		  <span date>
+		 Aug 21, 11:30 PM
+		  </span>
+		</div>
+		<p paratext>Brake Pad and Rotor</p>
+		<p paratext>Elmer's Tire and Auto</p>
+		<div location-status>
+		<p><ion-icon name="location-outline"></ion-icon> North Nyah 6889 Jerod Valley1</p>
+		<span status><ion-icon name="ellipse"></ion-icon> Active</span>
+		</div>
+	</ion-label>
+</ion-item>
+</ion-content>

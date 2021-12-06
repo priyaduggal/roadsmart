@@ -1,0 +1,50 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/productdetails"></ion-back-button>
+				<ion-title class="ion-text-center">Cart</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+<ion-item lines="none" class="ion-no-padding">
+ <ion-thumbnail>
+   <img src="assets/img/products1.png"/>
+ </ion-thumbnail>
+ <ion-label>
+   <h2>MRF Road Tyres </h2>
+   <span price>  $110.00  </span>
+   <ion-buttons><ion-icon name="trash"></ion-icon></ion-buttons>
+ </ion-label>
+ <div quantity slot="end"> <ion-icon name="add" (click)="increment()"></ion-icon> <span>{{currentNumber}}</span>   <ion-icon name="remove" (click)="decrement()"></ion-icon> </div>
+</ion-item>
+<ion-item lines="none" class="ion-no-padding">
+ <ion-thumbnail>
+   <img src="assets/img/products2.png"/>
+ </ion-thumbnail>
+ <ion-label>
+   <h2>Motul Engine Oil 1 ltr </h2>
+   <span price>  $140.00  </span>
+   <ion-buttons><ion-icon name="trash"></ion-icon></ion-buttons>
+ </ion-label>
+ <div quantity slot="end"> <ion-icon name="add" (click)="increment()"></ion-icon> <span>{{currentNumber}}</span>   <ion-icon name="remove" (click)="decrement()"></ion-icon> </div>
+</ion-item>
+<ion-item lines="none" class="ion-no-padding">
+ <ion-thumbnail>
+   <img src="assets/img/products3.png"/>
+ </ion-thumbnail>
+ <ion-label>
+   <h2>Hyundai Piston Part </h2>
+   <span price>  $145.00  </span>
+   <ion-buttons><ion-icon name="trash"></ion-icon></ion-buttons>
+ </ion-label>
+ <div quantity slot="end"> <ion-icon name="add" (click)="increment(1)"></ion-icon> <span>{{currentNumber}}</span>   <ion-icon name="remove" (click)="decrement()"></ion-icon> </div>
+</ion-item>
+</ion-content>
+<ion-footer>
+<div cartbottom>
+<div pricetotal>
+<h2>Total Amount</h2>
+   <span price><sup>$</sup>395.00</span>
+</div>
+<ion-button routerLink="/productcheckout">Checkout <span>3</span>			  
+</ion-button>				  
+</div>

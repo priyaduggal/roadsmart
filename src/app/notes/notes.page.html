@@ -1,0 +1,23 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/sub-services-quick-links"></ion-back-button>
+		<ion-title class="ion-text-center">Repairs</ion-title>
+		<ion-buttons cart-btn slot="end" routerLink="/tabs/cart"><ion-icon name="cart-outline"></ion-icon><span>2</span></ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+<div main-head>
+	<h1>Add a note for the mechanic</h1>
+	<p>Any additional information you can provide will improve the accuracy of the estimates you receive</p>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-textarea rows="10" placeholder="Enter your note here..."></ion-textarea>				
+		</ion-item>
+</div>
+	<div btnbottom class="ion-text-center">
+	 <ion-button  shape="rounded" routerLink="/tabs/summary-of-orders">
+				Continue
+	</ion-button>
+	</div>
+</ion-content>

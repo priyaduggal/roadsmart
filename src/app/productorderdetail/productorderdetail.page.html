@@ -1,0 +1,61 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/my-orders"></ion-back-button>
+		<ion-title class="ion-text-center">Order Details</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-item lines="none"  detail="false">
+	<ion-label>
+	   <div ordername>
+		  <h3># 101557</h3>
+		  <span date>
+		 Aug 21, 11:30 PM
+		  </span>
+		</div>
+		  <div subsection>
+		  <h3>Address -</h3>
+		  <p>4610 E Los Angeles Ave Unit A, Simi Valley,<br> CA93065</p>
+		  </div>
+		 <div subsection>
+		  <h3>Payment Information -</h3>
+		  <div subsection>
+		  <p>Visa********1234 <ion-icon name="chevron-down-outline"></ion-icon></p>
+		  <p>Jhone Smith</p>
+		  </div>
+		  </div>
+	</ion-label>
+</ion-item>
+
+<h2 heading ordersummary>Order Summary</h2>
+<ion-item lines="none" class="ion-no-padding" productdetail>
+ <ion-thumbnail>
+   <img src="assets/img/products1.png"/>
+ </ion-thumbnail>
+ <ion-label>
+   <h2>MRF Road Tyres </h2>
+   <span price>  $110.00  x 2 </span>
+ 
+ </ion-label>
+<ion-buttons slot="end">$220.00</ion-buttons>
+</ion-item>
+<ion-item lines="none" class="ion-no-padding" productdetail>
+ <ion-thumbnail>
+   <img src="assets/img/products2.png"/>
+ </ion-thumbnail>
+ <ion-label>
+   <h2>Motul Engine Oil 1 ltr</h2>
+   <span price>  $140.00  x 2 </span> 
+ 
+ </ion-label>
+<ion-buttons slot="end">$280.00</ion-buttons>
+</ion-item>
+<ion-item lines="none"  detail="false" totalprice>
+	<ion-label>
+      <div subsection  dflex>
+		  <h2>Total</h2>
+		  <span price>$500.00</span>
+		</div>
+	</ion-label>
+</ion-item>
+</ion-content>

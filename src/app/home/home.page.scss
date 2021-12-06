@@ -1,0 +1,253 @@
+ion-header
+{
+	&:after
+	{
+		display: none;
+	}
+	ion-toolbar
+	{
+		--background: #fdfdfb;
+		--min-height: 56px;
+		--border-width: 0px;
+	}
+	ion-title
+	{
+		font-size: 15px;
+		font-weight: 500;
+		color: var(--ion-color-primary);
+		padding: 0px 10px;
+		ion-icon 
+		{
+			font-size: 20px;
+			display: inline-block;
+			margin: 0px 2px -4px 0px;
+		}		
+		span
+		{
+			display: inline-block;
+			color: var(--ion-color-black);
+			font-size: 11px;
+			margin: 0px 0px 0px 2px;
+		}
+	}
+}
+ion-content
+{
+	--background: #fdfdfb;
+	--padding-bottom: 20px;
+	[offer-div]
+	{
+		padding: 16px 0px 20px 16px;
+		ion-card 
+		{
+		    border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+		    margin: 0px;
+			height: 200px;
+			position: relative;
+			z-index: 1;
+            width: 100%; 
+			background: url('../../assets/img/serviceimg1.jpg') no-repeat center center / cover;
+			overflow: hidden;
+			&:after
+			{
+				position: absolute;
+				content: "";
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				background: var(--ion-color-black);
+				opacity: 0.35;
+				z-index: -1;
+			}
+			[imgsec]
+			{
+			    position:relative;
+				width: 100%; 
+			    height: 100%;	
+				padding: 0px 0px 0px 20px;
+				display: flex;
+				align-items: center;				
+                [offer-badge]
+                {
+					display: inline-block;
+					background: var(--ion-color-primary);
+					color: var(--ion-color-black);
+					font-size: 12px;
+					font-weight: 600;
+					padding: 4px 7px 3px 9px;
+					position: absolute;
+					left: 0px;
+					top: 10px;
+					&:before 
+					{
+						position: absolute;
+						content: "";
+						top: 0px;
+						right: -8px;
+						width: 0px;
+						height: 0px;
+						border-top: 0px solid transparent;
+						border-left: 10px solid var(--ion-color-primary);
+						border-bottom: 14px solid transparent;
+					}
+					&:after 
+					{
+						position: absolute;
+						content: "";
+						bottom: 0px;
+						right: -8px;
+						width: 0px;
+						height: 0px;
+						border-bottom: 0px solid transparent;
+						border-left: 10px solid var(--ion-color-primary);
+						border-top: 14px solid transparent;
+					}								
+				}
+				h1
+				{
+					margin: 0px;
+					text-align: left;
+					color: var(--ion-color-white);
+					font-size: 22px;
+					line-height: 29px;
+					font-weight: 600;
+				}
+			}			
+		}	
+	}
+	[link-div]
+	{
+		padding: 0px 16px;
+		.p-3
+		{
+			padding: 3px;
+		}
+		[main-head]
+		{
+			font-size: 18px;
+			font-weight: 600;
+			margin: 0px 0px 15px;
+			color: var(--ion-color-black);
+		}
+		ion-item
+		{
+			--padding-start: 10px;
+			--padding-end: 0px;
+			--inner-padding-end: 5px;
+			--padding-top: 5px;
+			--padding-bottom: 5px;
+			border-radius: 8px;
+			--min-height: 48px;
+			--background: var(--ion-color-white);
+			box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
+			img
+			{
+				max-width: 20px;
+			}
+			ion-label
+			{
+				margin: 0px 0px 0px 3px;
+				font-size: 11px;
+				letter-spacing: -0.5px;
+				font-weight: 600;
+				white-space: normal;
+				color: var(--ion-color-black);
+			}
+		}
+	}
+	[renewal-div]
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 25px 15px 0px;
+		[renewal-head]
+		{
+			font-size: 15px;
+			font-weight: 600;
+			color: var(--ion-color-black);
+			margin: 0px;
+		}
+		[go-btn]
+		{
+			font-size: 14px;
+			font-weight: 600;
+			--box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+			--border-radius: 8px;
+			margin: 0px;
+			--padding-bottom: 0px;
+			--padding-top: 0px;
+			--padding-start: 18px;
+			--padding-end: 18px;
+			height: 34px;
+			text-transform: uppercase;
+			flex-shrink: 0;
+		}
+	}
+	[popular-service]
+	{
+		padding: 50px 15px 0px;
+		[service-head]
+		{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 18px;
+			font-weight: 600;
+			color: var(--ion-color-black);
+			margin: 0px 0px 10px;
+			[seeall-btn]
+			{
+				text-decoration: none;
+				font-size: 14px;
+				display: inline-block;
+				flex-shrink: 0;
+				margin: 0px 0px 0px 3px;
+				font-weight: 600;
+				color: var(--ion-color-primary);
+			}
+		}
+		[service-sec]
+		{
+			background: var(--ion-color-white);
+			border-radius: 8px;
+			box-shadow: 0px 0px 12px 0px rgba(0 , 0 , 0 , 0.1);
+			padding: 18px 4px;
+			outline: 0px;
+			text-align: center;
+			p
+			{
+				font-size: 12px;
+				font-weight: 600;
+				color: var(--ion-color-black);
+				margin: 7px 0px 0px;
+			}
+			img
+			{
+				max-height: 75px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

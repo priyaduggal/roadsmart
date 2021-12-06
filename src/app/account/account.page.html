@@ -1,0 +1,49 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/more"></ion-back-button>
+		<ion-title class="ion-text-center">My Account</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+<div userinfo>
+<ion-item lines="none" class="ion-no-padding">
+<ion-avatar>
+   <ion-icon name="camera-outline"></ion-icon>
+</ion-avatar>
+<ion-label>
+<h2>Test</h2>
+<p>9812345679</p>
+<p>test@gmail.com</p>
+</ion-label>
+</ion-item>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/person.png"/></ion-label>
+				<ion-input type="text" placeholder="Enter name"></ion-input>				
+		</ion-item>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/email.png"/></ion-label>
+				<ion-input type="email" placeholder="Enter Email"></ion-input>				
+		</ion-item>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/phone.png"/></ion-label>
+				<ion-input type="email" placeholder="Enter Contact"></ion-input>				
+		</ion-item>
+</div>
+	<div formgroup>
+		<ion-item lines="none" checkbox>
+           <ion-checkbox mode="md" slot="start"></ion-checkbox>
+				<ion-label>Enable Text Notifications</ion-label>
+		</ion-item>
+	</div>
+	<div btnbottom class="ion-text-center">
+	 <ion-button  shape="rounded">
+				Update Information
+	</ion-button>
+	</div>
+</ion-content>

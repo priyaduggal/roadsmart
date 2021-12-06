@@ -1,0 +1,81 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title class="ion-text-left"><ion-icon name="location-outline"></ion-icon>Ford Ranger <span routerLink="/changevehicle">Change</span></ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<div offer-div>
+		<ion-slides pager="false" [options]="slideOpts1">
+			<ion-slide>
+				<ion-card>
+					<div imgsec>
+						<span offer-badge>Offer</span>
+						<h1>Get <br/>50% on <br/>Repairing</h1>
+					</div>
+				</ion-card>
+			</ion-slide>
+        </ion-slides>	
+	</div>
+	<div link-div>
+		<h1 main-head>Quick Links</h1>
+		<ion-row>
+			<ion-col size="4" class="p-3">
+				<ion-item lines="none" detail="false" routerLink="/tabs/sub-services-quick-links">
+					<img src="assets/img/repair-icon.svg" alt="">
+					<ion-label>Repairs</ion-label>
+				</ion-item>			
+			</ion-col>
+			<ion-col size="4" class="p-3">
+				<ion-item lines="none" detail="false" routerLink="/tabs/sub-services-part">
+					<img src="assets/img/parts-icon.svg" alt="">
+					<ion-label>Parts</ion-label>
+				</ion-item>			
+			</ion-col>
+			<ion-col size="4" class="p-3">
+				<ion-item lines="none" detail="false">
+					<img src="assets/img/hire-icon.svg" alt="">
+					<ion-label>Hire</ion-label>
+				</ion-item>			
+			</ion-col>
+			<ion-col size="4" class="p-3">
+				<ion-item lines="none" detail="false" routerLink="/tabs/insurance">
+					<img src="assets/img/insurance-services-icon.svg" alt="">
+					<ion-label>Insurance Services</ion-label>
+				</ion-item>			
+			</ion-col>
+			<ion-col size="4" class="p-3">
+				<ion-item lines="none" detail="false">
+					<img src="assets/img/rescue-services-icon.svg" alt="">
+					<ion-label>Rescue Services</ion-label>
+				</ion-item>			
+			</ion-col>
+			<ion-col size="4" class="p-3">
+				<ion-item lines="none" detail="false">
+					<img src="assets/img/other-icon.svg" alt="">
+					<ion-label>Other</ion-label>
+				</ion-item>			
+			</ion-col>
+		</ion-row>
+	</div>
+	<div renewal-div>
+		<h2 renewal-head>Want to apply for renewal?</h2>
+		<ion-button go-btn color="primary" shape="round" routerLink="/renewableservices">Go</ion-button>
+	</div>
+	<div popular-service>
+		<h2 service-head>Popular Services <a seeall-btn routerLink="/services" href="javascript:void(0)">See All</a></h2>
+		<ion-row>
+			<ion-col size="6">
+				<div service-sec routerLink="/tabs/sub-services">
+					<img src="assets/img/brake-icon.png" alt="">
+					<p>Brakes</p>
+				</div>			
+			</ion-col>	
+			<ion-col size="6">
+				<div service-sec routerLink="/tabs/sub-services-electrical">
+					<img src="assets/img/electricals-icon.png" alt="">
+					<p>Electricals</p>
+				</div>			
+			</ion-col>		
+		</ion-row>
+	</div>
+</ion-content>

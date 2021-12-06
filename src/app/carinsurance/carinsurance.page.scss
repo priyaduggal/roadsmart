@@ -1,0 +1,35 @@
+ion-header {
+	&:after {
+		display: none;
+	}
+	border: 2px solid #f9f9f9;
+	ion-toolbar {
+		--background: #fff;
+		--min-height: 56px;
+		--border-width:0;
+		ion-title {
+			font-size: 15px;
+			font-weight: 700;
+			color: var(--ion-color-black);
+			padding: 0px 15px;
+		}
+	}
+}
+ion-content
+{
+p
+{
+    color: #b6b2b2;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 21px;
+    margin-top: 0px;
+}
+ion-buttons
+{
+color:var(--ion-color-primary);
+font-size:12px;
+font-weight:600;
+}
+}

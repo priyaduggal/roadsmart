@@ -1,0 +1,200 @@
+ion-header {
+	&:after {
+		display: none;
+	}
+	ion-toolbar {
+		--background: #fdfdfb;
+		--min-height: 56px;
+		--border-width: 0px;
+		ion-buttons {
+			font-size: 22px;
+			color: var(--ion-color-black);
+			&[slot="start"]
+			{
+			 margin-left:10px;
+			}
+			&[slot="end"]
+			{
+			 margin-right:10px;
+			}
+		}
+		ion-title {
+			font-size: 15px;
+			font-weight: 700;
+			color: var(--ion-color-black);
+			padding: 0px 10px;
+			span
+			{
+			width: 20px;
+			height: 20px;
+			background: var(--ion-color-primary);
+			border-radius: 50%;
+			color: var(--ion-color-white);
+			text-align: center;
+			line-height: 20px;
+			display: inline-block;
+			font-size: 11px;
+			}
+		}
+	}
+}
+
+ion-content {
+	--background: #fdfdfb;
+	--padding-top:0px;
+	ion-segment {
+		    padding:0px 16px;
+			ion-segment-button {
+				min-height: 45px;
+				height: 45px;
+				--indicator-height: 0px;
+				--indicator-color: transparent;
+				--indicator-color-checked: transparent;
+				color: var(--ion-color-black);
+				--color-checked: var(--ion-color-primary);
+				--color: var(--ion-color-primary);
+				text-transform: capitalize;
+				font-size: 13px;
+				font-weight: 600;
+				border-bottom:2px solid #eaeaea;
+				--background:transparent;
+                --background-hover: transparent;
+				
+				&.segment-button-checked {
+					color: var(--ion-color-primary);
+					--color-checked: var(--ion-color-primary);
+					--color: var(--ion-color-primary);
+					--background-hover: transparent;
+					--background: transparent;
+					background: transparent;
+					border-bottom:2px solid var(--ion-color-primary);
+					font-size: 13px;
+					font-weight: 600;
+				}
+			}
+		}
+		ion-list
+		{
+		  background:transparent;
+		  margin:10px 0px 0px;
+		  padding:0px;
+		  [messages]
+		  {
+		  	ion-item {
+				overflow: visible;
+				--background: transparent;
+				--padding-start: 16px;
+				--padding-end: 16px;
+				--padding-top: 20px;
+				--padding-bottom: 20px;
+				--inner-padding-end: 0px;
+				margin-bottom: 0px;
+				--min-height: auto;
+				border-bottom: 1px solid #f9f9f9;
+	         ion-avatar {
+				background: var(--ion-color-primary);
+				color: var(--ion-color-white);
+				font-size: 15px;
+				margin: 0;
+				font-weight: 500;
+				width: 32px;
+				height: 32px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			ion-label
+			{
+			  white-space:normal;
+			  margin:0px;
+			  margin-left:12px;
+			  h2
+			  {
+			    font-size: 12px;
+				line-height: 21px;
+				color: var(--ion-color-black);
+				font-weight:600;
+				margin:0px;
+			  }
+			  p
+			  {font-size: 11px;
+				line-height: normal;
+			    color:#b7b3b3;
+				margin:0px;
+			  }
+			}
+			  ion-note
+			  {font-size: 11px;
+				line-height: normal;
+			    color:#b7b3b3;
+				margin:0px 0px 0px 10px;
+			  }
+		   }
+		   }
+		  [notifications]
+		  {    padding: 5px 16px 0px;
+		     [notificationtop]
+			  {    align-items: center;
+			    background:#eaeaea;
+			   padding:10px 16px;
+			   ion-select
+			   {    max-width: 70px;
+			        padding: 0;
+					font-size: 12px;
+					font-weight: 600;
+					color: var(--ion-color-primary);
+			   }
+			   ion-buttons
+			   {    justify-content: flex-end;
+			     font-size:12px;
+				 font-weight:600;
+				 color:var(--ion-color-primary);
+			   }
+			  }
+			  [heading]
+			  {
+			   font-size:13px;
+			   font-weight:600;
+			   text-transform:uppercase;
+			   color:var(--ion-color-black);
+			   margin-top: 25px;
+			   margin-bottom: 15px;
+			   
+			  }
+			  	ion-item {
+				overflow: visible;
+				--background: transparent;
+				margin-bottom: 10px;
+				--min-height: auto;
+				--inner-padding-end:0px;
+			ion-label
+			{
+			  white-space:normal;
+			  margin:0px;
+			  h2
+			  {
+			    font-size: 12px;
+				line-height: 21px;
+				color: var(--ion-color-black);
+				font-weight:700;
+				margin:0px 0px 3px;
+			  }
+			  p
+			  { font-size: 11px;
+				line-height: normal;
+			    color:#c7c4c3;
+				margin:0px 0px 5px;
+				font-weight:500;
+			  }
+			  ion-note
+			  { font-size: 12px;
+				line-height: normal;
+			    color:#c7c4c3;
+				margin:0px;
+				font-weight:500;
+			  }
+			}
+			}
+	 	  }
+		}
+}

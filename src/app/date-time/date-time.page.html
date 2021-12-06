@@ -1,0 +1,102 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/estimated-places"></ion-back-button>
+		<ion-title class="ion-text-center">Choose an Appointment Time</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+<div calendar>
+<div calendardate>
+  <ion-datetime value="2020-08-20" displayFormat="MMMM YYYY" placeholder="Select Date"></ion-datetime>
+</div>
+ <div scrollX>
+        <div class="select-date" *ngFor="let item of items" (click)="toggleClass(item)"  [ngClass]="{'active': item.active}">
+            <p text-center>{{ item.week }}</p>
+            <h2 text-center>{{ item.day }}</h2>
+        </div>
+ </div>
+ <ion-row choosetime>
+   <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio1" style="display:none">
+    <label for="radio1">10:00 am</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio2"  style="display:none">
+    <label for="radio2">11:00 am</label>
+   </ion-col> <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio3" checked="" style="display:none">
+    <label for="radio3">12:00 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio4" style="display:none">
+    <label for="radio4">12:30 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio5" style="display:none">
+    <label for="radio5">01:00 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio6" style="display:none">
+    <label for="radio6">01:30 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio7" style="display:none">
+    <label for="radio7">02:00 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio8" style="display:none">
+    <label for="radio8">02:30 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio9" style="display:none">
+    <label for="radio9">03:00 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio10" style="display:none">
+    <label for="radio10">03:30 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio11" style="display:none">
+    <label for="radio11">04:00 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio12" style="display:none">
+    <label for="radio12">04:30 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio13" style="display:none">
+    <label for="radio13">05:00 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio14" style="display:none">
+    <label for="radio14">05:30 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio15" style="display:none">
+    <label for="radio15">06:00 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio16" style="display:none">
+    <label for="radio16">06:30 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio17" style="display:none">
+    <label for="radio17">07:00 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio18" style="display:none">
+    <label for="radio18">07:30 pm</label>
+   </ion-col>
+    <ion-col size="3">
+    <input type="radio" name="radiobox" id="radio19" style="display:none">
+    <label for="radio19">08:00 pm</label>
+   </ion-col>
+   <ion-col size="12" class="ion-text-center">
+    <ion-button  shape="rounded" routerLink="/payment">
+				Choose This Date And Time
+	</ion-button>
+   </ion-col>
+ </ion-row>
+
+</div>	
+</ion-content>

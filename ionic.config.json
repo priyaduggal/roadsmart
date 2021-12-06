@@ -1,0 +1,8 @@
+{
+  "name": "roadsmart",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

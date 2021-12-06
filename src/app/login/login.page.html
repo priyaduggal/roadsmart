@@ -1,0 +1,34 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+		<div form-head>
+			<h2><span>Roadsmart</span> Solutions</h2>
+			<p>Have some problem today? Don't worry. Now you part of us. Let us help you.</p>
+			<h3 welcome-text>Welcome Back</h3>			
+		</div>
+	<div form-field>
+		<div class="form-group">
+			<ion-item lines="none">
+				<ion-label><ion-icon name="person-outline"></ion-icon></ion-label>
+				<ion-input type="text" placeholder="Username"></ion-input>				
+			</ion-item>
+		</div>	
+		<div class="form-group border-0">
+			<ion-item lines="none">
+				<ion-label><ion-icon name="lock-closed-outline"></ion-icon></ion-label>
+				<ion-input type="text" placeholder="Password"></ion-input>
+				<ion-icon question-icon slot="end" name="help-circle-outline"></ion-icon>				
+			</ion-item>
+		</div>			
+		<ion-button login-btn shape="round" routerLink="/tabs/home">
+			<ion-icon name="arrow-forward-outline"></ion-icon>
+		</ion-button>				
+	</div>
+	<div btn-signup class="ion-text-center">
+		<p><span>Don't have an account?</span> <a href="javascript:void(0)" routerLink="/signup">Click here to Signup</a></p>
+	</div>	
+</ion-content>

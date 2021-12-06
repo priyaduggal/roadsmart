@@ -1,0 +1,130 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/productcart"></ion-back-button>
+	<ion-title class="ion-text-center">
+	 <div stepwizard>
+	    <ion-buttons   stepicon (click)="selectedItem = 'item1'" [ngClass]="{'active': selectedItem === 'item1'}"  style="z-index:111;">
+		    <span iconimg>
+			 <ion-icon name="location-outline"></ion-icon>
+			</span>
+	    </ion-buttons>
+	    <ion-buttons  stepicon (click)="selectedItem = 'item2'" [ngClass]="{'active': selectedItem === 'item2'}" style="z-index:11;">
+		    <span iconimg>
+			    <ion-icon name="cash-outline"></ion-icon>
+			</span>
+	    </ion-buttons>
+		    <ion-buttons  stepicon (click)="selectedItem = 'item3'" [ngClass]="{'active': selectedItem === 'item3'}"  style="z-index:1;">
+		    <span iconimg>
+			   <ion-icon name="checkmark-outline"></ion-icon>
+			</span>
+	    </ion-buttons>
+	 </div>
+	
+	</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+<div stepform [ngClass]="{'active': selectedItem === 'item1'}" >
+<div main-head>
+	<h1>Address</h1>
+	<p>Please fill the address details below:-</p>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/location.png"/></ion-label>
+				<ion-input type="text" placeholder="Delivery Address"></ion-input>				
+		</ion-item>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/city.png"/></ion-label>
+				<ion-input type="text" placeholder="City"></ion-input>				
+		</ion-item>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/state.png"></ion-label>
+				<ion-input type="text" placeholder="State"></ion-input>				
+		</ion-item>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/zip-code.png"/></ion-label>
+				<ion-input type="text" placeholder="Zipcode"></ion-input>				
+		</ion-item>
+</div>
+	<div formgroup>
+		<ion-item lines="none" checkbox>
+           <ion-checkbox mode="md" slot="start" checked></ion-checkbox>
+				<ion-label>Billing Address Same as Delivery</ion-label>
+		</ion-item>
+	</div>
+<div btnbottom class="ion-text-center ion-justify-content-center">
+	 <ion-button  shape="rounded" (click)="selectedItem = 'item2'" [ngClass]="{'active': selectedItem === 'item2'}">
+				Payment
+	</ion-button>
+	</div>	
+</div>
+<div stepform [ngClass]="{'active': selectedItem === 'item2'}" >
+<div main-head>
+	<h1>Payment</h1>
+	<p>Please fill the payment details below:-</p>
+</div>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/person.png"/></ion-label>
+				<ion-input type="text" placeholder="Name on Card"></ion-input>				
+		</ion-item>
+	</div>
+	<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/credit-card.png"/></ion-label>
+				<ion-input type="text" placeholder="Card Number"></ion-input>	
+               <ion-datetime slot="end" Placeholder="MM / YY" displayFormat="MM / YY" ></ion-datetime>				
+		</ion-item>
+	</div>
+		<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/credit-card.png"/></ion-label>
+				<ion-input type="text" placeholder="CVC"></ion-input>				
+		</ion-item>
+	</div>
+	<div formgroup>
+		<ion-item lines="none">
+				<ion-label><img src="assets/img/star.png"/></ion-label>
+				<ion-input type="text" placeholder="Zip Code"></ion-input>				
+		</ion-item>
+	</div>
+	<div formgroup>
+		<ion-item lines="none" checkbox>
+           <ion-checkbox mode="md" slot="start"></ion-checkbox>
+				<ion-label>Save these details for futher use</ion-label>
+		</ion-item>
+	</div>	
+	<div btnbottom class="ion-text-center">
+	<div pricetotal class="ion-text-left">
+<h2>Total Amount</h2>
+   <span price><sup>$</sup>395.00</span>
+</div>
+	 <ion-button  shape="rounded" (click)="selectedItem = 'item3'" [ngClass]="{'active': selectedItem === 'item3'}">
+				Place Order
+	</ion-button>
+	</div>	
+</div>
+<div stepform [ngClass]="{'active': selectedItem === 'item3'}" >
+<div thanyou class="ion-text-center ion-padding">
+<div thanyouimg>
+<img height="150px" src="assets/img/confirm.png"/>
+
+</div>
+	<h2>Thank You!</h2>
+	<p>Your order has been placed successfully .You will recieve an email receipt shortly.</p>
+</div>
+
+	<div btnbottom class="ion-text-center ion-justify-content-center">
+	 <ion-button  shape="rounded" routerLink="/tabs/products">
+				Back To Home
+	</ion-button>
+	</div>	
+</div>			
+</ion-content>

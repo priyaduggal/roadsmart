@@ -1,0 +1,203 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/car-details"></ion-back-button>
+		<ion-title class="ion-text-center">
+		<ng-container *ngIf="segment === 'vehicleinfo'">Vehicle Info</ng-container>
+		<ng-container *ngIf="segment === 'licensing'">Licensing</ng-container>
+		<ng-container *ngIf="segment === 'insurance'">Insurance</ng-container>
+		<ng-container *ngIf="segment === 'maintenance'">Maintenance</ng-container>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-segment scrollable mode="md"   (ionChange)="segmentChanged($event)" value="insurance">
+		<ion-segment-button value="vehicleinfo">
+			<ion-label>Vehicle Info</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="licensing">
+			<ion-label>Licensing</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="insurance">
+			<ion-label>Insurance</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="maintenance">
+			<ion-label>Maintenance</ion-label>
+		</ion-segment-button>
+	</ion-segment>
+	<ion-list *ngIf="segment === 'vehicleinfo'">
+	   	
+	<div forminner >
+			  <h2 heading>Identification</h2>
+			  <div formgroup>
+				<label>Vehicle Name</label>
+				<ion-item lines="none">
+						<ion-input readonly value="Toyota Hilux"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>VIN</label>
+				<ion-item lines="none">
+						<ion-input readonly value="BAC, 1412"></ion-input>				
+				</ion-item>
+			</div>
+				<div formgroup>
+				<label>License Plate Type</label>
+				<ion-item lines="none">
+						<ion-input readonly value="Car"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Year</label>
+				<ion-item lines="none">
+						<ion-input readonly value="2013"></ion-input>					
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Make</label>
+				<ion-item lines="none">
+						<ion-input readonly value="Toyota"></ion-input>			
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Model</label>
+				<ion-item lines="none">
+					<ion-input readonly value="LE"></ion-input>		
+				</ion-item>
+				</div>
+			<div formgroup>
+				<label>Trim</label>
+				<ion-item lines="none">
+					<ion-input readonly value="22/October/20"></ion-input>			
+				</ion-item>
+			</div>
+		</div>
+	<div forminner >
+			  <h2 heading>Specifications</h2>
+			  <div formgroup formfield>
+				<label>Weight</label>
+				<ion-item lines="none">
+						<ion-input readonly value="Gross Weight - 1.4 tons"></ion-input>			
+				</ion-item>
+				<ion-item lines="none">
+						<ion-input readonly value="Net Weight - 1600 kg"></ion-input>				
+				</ion-item>
+			</div>
+			 <div formgroup formfield>
+				<label>Engine</label>
+				<ion-item lines="none">
+						<ion-input readonly value="Type - Electrical engines"></ion-input>					
+				</ion-item>
+				<ion-item lines="none">
+						<ion-input readonly value="Displacement - 2.0-litre four-cyclinder engine"></ion-input>					
+				</ion-item>
+			</div>
+			<div radiogroup formgroup>
+				<label>Transmission</label>
+				<ion-radio-group value="automatic">
+					<ion-item lines="none"  class="ion-no-padding">
+					 <ion-input readonly value="Automatic"></ion-input>		
+					</ion-item>
+				</ion-radio-group>
+			</div>
+			  <div formgroup>
+				<label>Wheels & Tires</label>
+				<ion-item lines="none">
+					<ion-input readonly value="195/65 R15 91H"></ion-input>	
+				</ion-item>
+			</div>
+			</div>
+			<div forminner >
+				<div formgroup>
+				<label>Status</label>
+				<ion-item lines="none">
+				<ion-input readonly value="Active"></ion-input>	
+				</ion-item>
+			</div>
+	</div>
+	</ion-list>
+	<ion-list *ngIf="segment === 'licensing'">
+	 <div forminner>
+			  <h2 heading>Road Tax</h2>
+			  <div formgroup>
+				<label>Expiry Date</label>
+				<ion-item lines="none">
+					<ion-input readonly value="27/October/20"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Quarter Expiring</label>
+				<ion-item lines="none">
+					<ion-input readonly value="22/October/20"></ion-input>							
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Status</label>
+				<ion-item lines="none">
+				<ion-input readonly value="Active"></ion-input>							
+				</ion-item>
+			</div>
+		</div>
+		  <div forminner>
+			  <h2 heading>Fitness</h2>
+			  <div formgroup>
+				<label>Expiry Date</label>
+				<ion-item lines="none">
+						<ion-input readonly value="27/October/20"></ion-input>						
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Quarter Expiring</label>
+				<ion-item lines="none">
+					<ion-input readonly value="22/October/20"></ion-input>							
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Status</label>
+				<ion-item lines="none">
+				<ion-input readonly value="Active"></ion-input>				
+				</ion-item>
+			</div>
+		</div>
+		 <div formgroup>
+		    <label>Current Owner</label>
+			<ion-item lines="none">
+					<ion-input readonly value="Abc Xyz"></ion-input>				
+			</ion-item>
+		</div>
+	 <div formgroup>
+		    <label>Absolute Owner</label>
+			<ion-item lines="none">
+					<ion-input readonly value="Demo Name"></ion-input>				
+			</ion-item>
+		</div>
+	    <div formgroup>
+		    <label>Ownership</label>
+			<ion-item lines="none">
+				<ion-input readonly  value="Rented"></ion-input>				
+			</ion-item>	
+		</div>
+	</ion-list>
+	<ion-list *ngIf="segment === 'insurance'">
+	    <div formgroup>
+		    <label>Provider</label>
+			<ion-item lines="none">
+			 <ion-input readonly value="Hollard"></ion-input>					
+			</ion-item>
+		</div>
+	    <div formgroup>
+		    <label>Cover</label>
+			<ion-item lines="none">
+			<ion-input readonly placeholder="Five and Theft"></ion-input>					
+			</ion-item>
+		</div>
+		 <div formgroup>
+		    <label>Expiry Date</label>
+			<ion-item lines="none">
+					<ion-input readonly placeholder="27/October/20"></ion-input>				
+			</ion-item>
+		</div>
+	</ion-list>
+		<ion-list *ngIf="segment === 'vehiclemaintenanceinfo'">
+	maintenance
+	</ion-list>
+</ion-content>

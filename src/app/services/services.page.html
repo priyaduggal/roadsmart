@@ -1,0 +1,115 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref=""></ion-back-button>
+		<ion-title class="ion-text-center">All Services</ion-title>
+		<ion-buttons slot="end">
+		 <img src="assets/img/filter.png"/>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	   <ion-segment scrollable  mode="md"   (ionChange)="segmentChanged($event)" value="allservices">
+			<ion-segment-button value="allservices">
+				<ion-label>All Services</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="wheel">
+				<ion-label>Wheel</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="cleaning">
+				<ion-label>Cleaning</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="dentingpainting">
+				<ion-label>Denting & Painting</ion-label>
+			</ion-segment-button>
+		</ion-segment>
+		<ion-list *ngIf="segment === 'allservices'">
+		  <ion-row>
+			<ion-col size="6">
+				<div service-sec routerLink="/tabs/sub-services">
+					<img src="assets/img/brake-icon.png" alt="">
+					<p>Brakes</p>
+				</div>			
+			</ion-col>	
+			<ion-col size="6">
+				<div service-sec routerLink="/tabs/sub-services-electrical">
+					<img src="assets/img/electricals-icon.png" alt="">
+					<p>Electricals</p>
+				</div>			
+			</ion-col>	
+            <ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/brake-icon.png" alt="">
+					<p>Engine</p>
+				</div>			
+			</ion-col>	
+			<ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/electricals-icon.png" alt="">
+					<p>Exhaust</p>
+				</div>			
+			</ion-col>	
+       <ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/brake-icon.png" alt="">
+					<p>Air Conditioner</p>
+				</div>			
+			</ion-col>	
+			<ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/electricals-icon.png" alt="">
+					<p>Steering & Suspension</p>
+				</div>			
+			</ion-col>				
+		</ion-row>
+		</ion-list>
+		<ion-list *ngIf="segment === 'wheel'">
+		 <ion-row>
+			
+            <ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/brake-icon.png" alt="">
+					<p>Engine</p>
+				</div>			
+			</ion-col>	
+			<ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/electricals-icon.png" alt="">
+					<p>Exhaust</p>
+				</div>			
+			</ion-col>				
+		</ion-row>
+		</ion-list>
+		<ion-list *ngIf="segment === 'cleaning'">
+		 <ion-row>
+		 <ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/brake-icon.png" alt="">
+					<p>Air Conditioner</p>
+				</div>			
+			</ion-col>
+				<ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/electricals-icon.png" alt="">
+					<p>Steering & Suspension</p>
+				</div>			
+			</ion-col>		
+		</ion-row>
+		</ion-list>
+		<ion-list *ngIf="segment === 'dentingpainting'">
+		 <ion-row>
+			<ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/brake-icon.png" alt="">
+					<p>Brakes</p>
+				</div>			
+			</ion-col>	
+			
+			<ion-col size="6">
+				<div service-sec>
+					<img src="assets/img/electricals-icon.png" alt="">
+					<p>Exhaust</p>
+				</div>			
+			</ion-col>				
+		</ion-row>
+		</ion-list>
+</ion-content>

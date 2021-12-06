@@ -1,0 +1,35 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+	   <ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/more"></ion-back-button>
+		<ion-buttons routerLink="/tabs/vehicle-modal-year" slot="end"><ion-icon name="add"></ion-icon></ion-buttons>
+		<ion-title class="ion-text-center">Vehicles</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+<ion-item lines="none"> 
+<ion-avatar routerLink="/tabs/car-details">
+ <img src="assets/img/bmw-logo.svg"/>
+</ion-avatar>
+<ion-label>
+<h2 routerLink="/tabs/car-details">Wife's Car</h2>
+<p>2013 Toyota Hilux</p>
+<p><ion-icon name="ellipse"></ion-icon> Active</p>
+</ion-label>
+<ion-buttons slot="end">
+Request A Service
+</ion-buttons>
+</ion-item>
+<ion-item lines="none"> 
+<ion-avatar routerLink="/tabs/car-details">
+ <img src="assets/img/bmw-logo.svg"/>
+</ion-avatar>
+<ion-label>
+<h2 routerLink="/tabs/car-details">Field Truck</h2>
+<p>2013 Jeep Path</p>
+<p><span>Bad 602</span> <ion-icon name="ellipse"></ion-icon> Active</p>
+</ion-label>
+<ion-buttons slot="end">
+Request A Service
+</ion-buttons>
+</ion-item>
+</ion-content>

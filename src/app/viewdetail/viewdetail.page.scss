@@ -1,0 +1,130 @@
+ion-header {
+	&:after {
+		display: none;
+	}
+	ion-toolbar {
+		--background: #fdfdfb;
+		--min-height: 56px;
+		--border-width: 0px;
+		ion-back-button {
+			--icon-font-size: 18px;
+			--min-width: 30px;
+			color: var(--ion-color-black);
+		}
+		ion-title {
+			font-size: 15px;
+			font-weight: 700;
+			color: var(--ion-color-black);
+			padding: 0px 10px;
+		}
+	}
+}
+
+ion-content {
+	--background: #fdfdfb;
+	ion-segment {
+		    padding:10px 16px 16px;
+			ion-segment-button {
+				min-height: 33px;
+				height: 35px;
+				--indicator-height: 0px;
+				--indicator-color: transparent;
+				--indicator-color-checked: transparent;
+				color: var(--ion-color-black);
+				--color-checked: var(--ion-color-primary);
+				--color: var(--ion-color-primary);
+				text-transform: capitalize;
+				font-size: 11px;
+				font-weight: 600;
+				border:1px solid var(--ion-color-primary);
+				--background: #fdfdfb;
+                --background-hover: #fdfdfb;
+				    border-radius: 8px;
+					margin-right: 6px;
+					box-shadow:0px 0px 10px rgba(0,0,0,0.07);
+					&:last-child
+					{
+					margin-right: 0px;
+					}
+					
+				&.segment-button-checked {
+					color: var(--ion-color-white);
+					--color-checked: var(--ion-color-white);
+					--color: var(--ion-color-white);
+					--background-hover: transparent;
+					--background:var(--ion-color-primary);
+					background: var(--ion-color-primary);
+					border:1px solid var(--ion-color-primary);
+					font-size: 11px;
+					font-weight: 600;
+				}
+			}
+		}
+		ion-list
+		{
+		    background: transparent;
+		}
+		[forminner]
+		{border-bottom: 1px solid #f9f9f9;
+		  [heading]
+		  {margin-bottom: 20px;
+		  
+              font-size: 14px;						
+              font-weight: 700;
+		  }
+		  padding:12px 16px 0;
+		[formgroup]
+		{
+		    border-bottom: none;
+			padding:0px;
+			margin-bottom:20px;
+			label
+			{font-weight: 600;
+			font-size: 12px;	
+			}
+			ion-item
+			{
+			  --min-height: 30px;
+			}
+		}
+		
+		}
+		[formgroup]
+		{border-bottom: 1px solid #f9f9f9;
+			padding:25px 16px 12px;
+			label
+			{
+              font-size: 13px;						
+              font-weight: 700;
+			}			
+			ion-item
+			{
+			
+				border-radius: 0px;
+				--min-height: 40px;
+				--padding-start: 0px;
+				--padding-end: 0px;
+				--inner-padding-end: 0px;
+				--background:transparent;	   	
+			
+				ion-input   
+				{    width: 100%;
+					color: #b6b3b2;
+					--placeholder-opacity: 1;
+					--padding-bottom: 0px;
+					--padding-top: 0px;
+					font-size: 11px;
+                    --placeholder-font-weight: 400;							
+                    font-weight: 500;		
+				}		
+			
+			}
+			&[formfield]
+			{ 
+               ion-item
+			   {    margin-top: 10px;
+			       --min-height: auto!important
+			   }
+			}			
+		}
+}

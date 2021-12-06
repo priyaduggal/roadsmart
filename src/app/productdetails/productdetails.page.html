@@ -1,0 +1,43 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/products"></ion-back-button>
+				<ion-title class="ion-text-center">Motul Engine Oil 1 ltr</ion-title>
+		<ion-buttons slot="end">
+		 <ion-icon name="heart"></ion-icon>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+<ion-slides pager="true" [options]="slideOpts" productslide>
+        <ion-slide>
+           <div productimg>
+		     <img src="assets/img/products2.png"/>
+		   </div>
+        </ion-slide>
+		  <ion-slide>
+           <div productimg>
+		     <img src="assets/img/products2.png"/>
+		   </div>
+        </ion-slide>
+		  <ion-slide>
+           <div productimg>
+		     <img src="assets/img/products2.png"/>
+		   </div>
+        </ion-slide>
+      </ion-slides>
+	  <div productdetail>
+	    <h2>Motul Engine Oil 1 ltr</h2>
+	   
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+	  
+	  </div>
+</ion-content>
+<ion-footer>
+<div productbottom>
+   <span price><sup>$</sup>140.00</span>
+<div quantity>  <ion-icon name="remove" (click)="decrement()"></ion-icon><span>{{currentNumber}}</span>  <ion-icon name="add" (click)="increment()"></ion-icon></div>
+<ion-button routerLink="/productcart">	<ion-icon name="cart"></ion-icon>			  
+</ion-button>				  
+</div>
+</ion-footer>

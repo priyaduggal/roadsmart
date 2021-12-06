@@ -1,0 +1,122 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-icon name="search-outline"></ion-icon>
+		</ion-buttons>
+		<ion-title class="ion-text-center">
+		<ng-container *ngIf="segment === 'messages'">Messages</ng-container>
+		<ng-container *ngIf="segment === 'notifications'">Notifications <span>2</span></ng-container>
+		
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-icon name="add"></ion-icon>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-segment mode="md"   (ionChange)="segmentChanged($event)" value="messages">
+		<ion-segment-button value="messages">
+			<ion-label>Messages</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="notifications">
+			<ion-label>Notifications</ion-label>
+		</ion-segment-button>
+	</ion-segment>
+	<ion-list *ngIf="segment === 'messages'">
+	<div messages>
+		<ion-item lines="none" routerLink="/chat">
+			<ion-avatar>
+				<span>J</span>
+			</ion-avatar>
+			<ion-label>
+				<h2>Jacob</h2>
+				<p>Have you ever been there?</p>
+			</ion-label>
+			<ion-note>14:28</ion-note>
+		</ion-item>
+		<ion-item lines="none" routerLink="/chat">
+			<ion-avatar>
+				<span>L</span>
+			</ion-avatar>
+			<ion-label>
+				<h2>Liam</h2>
+				<p>It is very nice of you</p>
+			</ion-label>
+			<ion-note>12:19</ion-note>
+		</ion-item>
+		<ion-item lines="none" routerLink="/chat">
+			<ion-avatar>
+				<span>E</span>
+			</ion-avatar>
+			<ion-label>
+				<h2>Ethan</h2>
+				<p>Wait a minute</p>
+			</ion-label>
+			<ion-note>12:19</ion-note>
+		</ion-item>
+		<ion-item lines="none" routerLink="/chat">
+			<ion-avatar>
+				<span>N</span>
+			</ion-avatar>
+			<ion-label>
+				<h2>Noah</h2>
+				<p>Send me a mail</p>
+			</ion-label>
+			<ion-note>11:08</ion-note>
+		</ion-item>
+		<ion-item lines="none" routerLink="/chat">
+			<ion-avatar>
+				<span>E</span>
+			</ion-avatar>
+			<ion-label>
+				<h2>Eeyore</h2>
+				<p>That's great</p>
+			</ion-label>
+			<ion-note>11:00</ion-note>
+		</ion-item>
+		<ion-item lines="none" routerLink="/chat">
+			<ion-avatar>
+				<span>T</span>
+			</ion-avatar>
+			<ion-label>
+				<h2>Tina</h2>
+				<p>What are you doing tonight?</p>
+			</ion-label>
+			<ion-note>10:35</ion-note>
+		</ion-item>
+		<ion-item lines="none" routerLink="/chat">
+			<ion-avatar>
+				<span>L</span>
+			</ion-avatar>
+			<ion-label>
+				<h2>Lucas</h2>
+				<p>Then let's change a light?</p>
+			</ion-label>
+			<ion-note>08:20</ion-note>
+		</ion-item>
+		</div>
+	</ion-list>
+	<ion-list *ngIf="segment === 'notifications'">
+		<div notifications>
+		<ion-row notificationtop>
+		  <ion-col size="6">
+		  	<ion-select value="{{MymessageValue}}" [interfaceOptions]="customAlertOptions" interface="alert">
+			  <ion-select-option value="message1">Read</ion-select-option>
+			  <ion-select-option value="message2">Unread</ion-select-option>
+			</ion-select>
+		  </ion-col>
+		   <ion-col size="6">
+		     <ion-buttons>Mark All As Read</ion-buttons>
+		  </ion-col>
+		</ion-row>
+       <h2 heading>Recent</h2>	
+          <ion-item lines="none" class="ion-no-padding">
+			<ion-label>
+				<h2>Road Tax for Toyota Hilux ALB</h2>
+				<p>Road tax for Toyota Hilux ALB 6152 is about to expire.</p>
+				<ion-note>21 mins ago</ion-note>
+			</ion-label>
+		</ion-item>	   
+		</div>
+	</ion-list>
+</ion-content>

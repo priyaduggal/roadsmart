@@ -1,0 +1,224 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/car-details"></ion-back-button>
+		<ion-title class="ion-text-center">Edit
+		<ng-container *ngIf="segment === 'vehicleinfo'">Vehicle Info</ng-container>
+		<ng-container *ngIf="segment === 'licensing'">Licensing</ng-container>
+		<ng-container *ngIf="segment === 'insurance'">Insurance</ng-container>
+		<ng-container *ngIf="segment === 'maintenance'">Maintenance</ng-container>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-segment scrollable mode="md"   (ionChange)="segmentChanged($event)" value="insurance">
+		<ion-segment-button value="vehicleinfo">
+			<ion-label>Vehicle Info</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="licensing">
+			<ion-label>Licensing</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="insurance">
+			<ion-label>Insurance</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="maintenance">
+			<ion-label>Maintenance</ion-label>
+		</ion-segment-button>
+	</ion-segment>
+	<ion-list *ngIf="segment === 'vehicleinfo'">
+	
+	<div forminner forminner2>
+			  <h2 heading>Identification</h2>
+			  <div formgroup>
+				<label>Vehicle Name</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="Enter a nickname to distinguish this vehicle"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>VIN</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="Vehicle identification Number or Serial Number"></ion-input>				
+				</ion-item>
+			</div>
+				<div formgroup>
+				<label>License Plate Type</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="Car, Bus, Motorcycle"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Year</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="e.g 1998, 2019"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Make</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="e.g Toyota, GMC, Chevrolet, etc."></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Model</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="e.g 4Runner, Yukon, Silverado, etc."></ion-input>				
+				</ion-item>
+				</div>
+			<div formgroup>
+				<label>Trim</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="e.g SE, LE, XLE, etc."></ion-input>				
+				</ion-item>
+			</div>
+		</div>
+	<div forminner forminner2>
+			  <h2 heading>Specifications</h2>
+			  <div formgroup formfield>
+				<label>Weight</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="Enter Gross Weight"></ion-input>				
+				</ion-item>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="Enter Net Weight"></ion-input>				
+				</ion-item>
+			</div>
+			 <div formgroup formfield>
+				<label>Engine</label>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="Enter Type"></ion-input>				
+				</ion-item>
+				<ion-item lines="none">
+						<ion-input type="text" placeholder="Enter Displacement"></ion-input>				
+				</ion-item>
+			</div>
+			<div radiogroup formgroup>
+				<label>Transmission</label>
+				<ion-radio-group value="automatic">
+					<ion-item lines="none"  class="ion-no-padding">
+					  <ion-label>Automatic</ion-label>
+					  <ion-radio mode="md" slot="start" value="automatic"></ion-radio>
+					</ion-item>
+					<ion-item lines="none"  class="ion-no-padding">
+					  <ion-label>Manual</ion-label>
+					  <ion-radio mode="md" slot="start" value="manual"></ion-radio>
+					</ion-item>
+				</ion-radio-group>
+			</div>
+			  <div formgroup>
+				<label>Wheels & Tires</label>
+				<ion-item lines="none">
+						<ion-input placeholder="Enter Tyre Size"></ion-input>				
+				</ion-item>
+			</div>
+			</div>
+			<div forminner >
+				<div formgroup>
+				<label>Status</label>
+				<ion-item lines="none">
+				<ion-select value="{{MystatusValue}}" [interfaceOptions]="customAlertOptions2" interface="alert"  placeholder="Select Cover">
+				  <ion-select-option value="status1">Active</ion-select-option>
+				  <ion-select-option value="status2">Inactive</ion-select-option>
+				</ion-select>			
+				</ion-item>
+			</div>
+	</div>
+			
+	
+	</ion-list>
+	<ion-list *ngIf="segment === 'licensing'">
+	     <div forminner>
+			  <h2 heading>Road Tax</h2>
+			  <div formgroup>
+				<label>Expiry Date</label>
+				<ion-item lines="none">
+						<ion-input placeholder="Enter Expiry Date"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Quarter Expiring</label>
+				<ion-item lines="none">
+						<ion-input placeholder="Enter Quarter Expiring"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Status</label>
+				<ion-item lines="none">
+				<ion-select value="{{MystatusValue}}" [interfaceOptions]="customAlertOptions2" interface="alert"  placeholder="Select Cover">
+				  <ion-select-option value="status1">Active</ion-select-option>
+				  <ion-select-option value="status2">Inactive</ion-select-option>
+				</ion-select>			
+				</ion-item>
+			</div>
+		</div>
+		  <div forminner>
+			  <h2 heading>Fitness</h2>
+			  <div formgroup>
+				<label>Expiry Date</label>
+				<ion-item lines="none">
+						<ion-input placeholder="Enter Expiry Date"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Quarter Expiring</label>
+				<ion-item lines="none">
+						<ion-input placeholder="Enter Quarter Expiring"></ion-input>				
+				</ion-item>
+			</div>
+			<div formgroup>
+				<label>Status</label>
+				<ion-item lines="none">
+				<ion-select value="{{MystatusValue}}" [interfaceOptions]="customAlertOptions2" interface="alert"  placeholder="Select Cover">
+				  <ion-select-option value="status1">Active</ion-select-option>
+				  <ion-select-option value="status2">Inactive</ion-select-option>
+				</ion-select>			
+				</ion-item>
+			</div>
+		</div>
+		 <div formgroup>
+		    <label>Current Owner</label>
+			<ion-item lines="none">
+					<ion-input placeholder="Enter Current Owner"></ion-input>				
+			</ion-item>
+		</div>
+	 <div formgroup>
+		    <label>Absolute Owner</label>
+			<ion-item lines="none">
+					<ion-input placeholder="Enter Absolute Owner"></ion-input>				
+			</ion-item>
+		</div>
+	    <div formgroup>
+		    <label>Ownership</label>
+			<ion-item lines="none">
+			<ion-select value="{{MyownershipValue}}" [interfaceOptions]="customAlertOptions3" interface="alert"  placeholder="Select Cover">
+			  <ion-select-option value="ownershi1">Owned</ion-select-option>
+			</ion-select>			
+			</ion-item>
+		</div>
+	</ion-list>
+	<ion-list *ngIf="segment === 'insurance'">
+	    <div formgroup>
+		    <label>Provider</label>
+			<ion-item lines="none">
+			<ion-select value="{{MyproviderValue}}" [interfaceOptions]="customAlertOptions" interface="alert"  placeholder="Select Provider">
+			  <ion-select-option value="provider1">Madison</ion-select-option>
+			</ion-select>			
+			</ion-item>
+		</div>
+	    <div formgroup>
+		    <label>Cover</label>
+			<ion-item lines="none">
+			<ion-select value="{{MycoverValue}}" [interfaceOptions]="customAlertOptions1" interface="alert"  placeholder="Select Cover">
+			  <ion-select-option value="cover1">Third Party</ion-select-option>
+			</ion-select>			
+			</ion-item>
+		</div>
+		 <div formgroup>
+		    <label>Expiry Date</label>
+			<ion-item lines="none">
+					<ion-input placeholder="Enter Expiry Date"></ion-input>				
+			</ion-item>
+		</div>
+	</ion-list>
+	<ion-list *ngIf="segment === 'maintenance'">maintenance
+	</ion-list>
+</ion-content>

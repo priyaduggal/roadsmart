@@ -1,0 +1,30 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-back-button text="" icon="arrow-back-outline" slot="start" defaultHref="/tabs/home"></ion-back-button>
+		<ion-title class="ion-text-center">Sub Categories</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+<div main-head>
+	<h1>Electrical Services</h1>
+	<p>What electrical services you want?</p>
+</div>
+<ion-list>
+	<ion-item lines="none" detail="false">
+		<ion-label  routerLink="/tabs/requests">Electrical System Diagnosis</ion-label>
+		<ion-buttons plus-btn slot="end" routerLink="/tabs/home"><ion-icon name="add-outline"></ion-icon></ion-buttons>
+	</ion-item>
+	<ion-item lines="none" detail="false">
+		<ion-label  routerLink="/tabs/requests">Lighting</ion-label>
+		<ion-buttons plus-btn slot="end" routerLink="/tabs/home"><ion-icon name="add-outline"></ion-icon></ion-buttons>
+	</ion-item>
+	<ion-item lines="none" detail="false">
+		<ion-label  routerLink="/tabs/requests">Start and Charging</ion-label>
+		<ion-buttons plus-btn slot="end" routerLink="/tabs/home"><ion-icon name="add-outline"></ion-icon></ion-buttons>
+	</ion-item>
+	<ion-item lines="none" detail="false">
+		<ion-label  routerLink="/tabs/requests">Other</ion-label>
+		<ion-buttons plus-btn slot="end"  routerLink="/tabs/home"><ion-icon name="add-outline"></ion-icon></ion-buttons>
+	</ion-item>
+</ion-list>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header mode="ios">
+	<ion-toolbar>
+		<ion-title class="ion-text-center">Filters</ion-title>
+		<ion-buttons slot="end" (click)="dismiss()">
+		 <ion-icon name="close-outline"></ion-icon>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content productfilters>
+<div formgroup>
+		<ion-item lines="none">
+				<ion-searchbar mode="md" placeholder="Search Products..."></ion-searchbar>				
+		</ion-item>
+</div>
+<div formgroup pb-10>
+<label heading>Filter By Type</label>
+		<ion-item lines="none" checkbox>
+           <ion-checkbox mode="md" slot="start"></ion-checkbox>
+				<ion-label>Spare Parts</ion-label>
+		</ion-item>
+		<ion-item lines="none" checkbox>
+           <ion-checkbox mode="md" slot="start"></ion-checkbox>
+				<ion-label>Accessories</ion-label>
+		</ion-item>
+</div>
+<div formgroup pb-10>
+<label heading>Filter By Brands</label>
+		<ion-item lines="none" checkbox>
+           <ion-checkbox mode="md" slot="start"></ion-checkbox>
+				<ion-label>Brand 1</ion-label>
+		</ion-item>
+		<ion-item lines="none" checkbox>
+           <ion-checkbox mode="md" slot="start"></ion-checkbox>
+				<ion-label>Brand 2</ion-label>
+		</ion-item>
+</div>
+<div formgroup>
+<label heading>Filter By Price <span>$10-100</span></label>
+		<ion-item lines="none">
+				  <ion-range value="20" min="0" max="100" dual-knobs  step="5">       
+          </ion-range>	
+		</ion-item>
+</div>
+<div btnbottom>
+		<ion-button  shape="rounded" (click)="dismiss()">
+		 Apply
+		</ion-button>
+		<ion-button  shape="rounded" fill="outline" (click)="dismiss()">
+		  Clear
+		</ion-button>
+</div>
+</ion-content>
